@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+<div class="container main">
+    <div class="row">
+        <div class="col-lg-12">
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <!--<i class="fa fa-comments fa-5x"></i>-->
+                            <h2>Articles Dashboard</h2><br/>
+                            <h5>Total Approved article = <a th:text="${totalApprovedArticle}"></a> </h5>
+							<h5>Approved article in English = <a href="#" th:text="${approvedEnglish}"></a> </h5>
+							<h5>Approved article in Tamil = <a href="#" th:text="${approvedTamil}"></a> </h5>
+							<h5>Total Pending articles =  <a th:text="${totalPendingArticle}"></a></h5>
+							<h5>English article pending = <a href="#" th:text="${pendingEnglish}"></a> </h5>
+							<h5>Tamil article  pending= <a href="#" th:text="${pendingTamil}"></a> </h5>                            
+							</div>
+                        <div class="col-xs-6 text-right">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div><h2>Campaign Details</h2></div><br/>
+                            <h4>Total campaign  = <a th:text="${totalcampaign}"></a> </h4>
+							<h4><a href="/userFront/campaign/Active">Active Campaign</a> = <a th:text="${activecampaign}"></a> </h4>
+							<h4><a href="/userFront/campaign/pending" >Pending Campaign</a> = <a th:text="${pendingcampaign}"></a> </h4>
+							<h4><a  href="/userFront/campaign/Onhold" >On-hold campaign</a> =  <a th:text="${onholdcampaign}"></a></h4>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-credit-card fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div><h3>Clients</h3></div><br/>
+                            	<h5>The total number of clients  = <a th:text="${totalnumber}"></a> </h5>
+								<h5><a href="/userFront/client/Active">Active Clients</a> = <a  th:text="${activeclients}"></a> </h5>
+								<h5><a href="/userFront/client/Onhold">On-hold</a> = <a  th:text="${onholdclients}"></a> </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-credit-card fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div><h3>Misc</h3></div><br/>
+                             <h5>Category = <a th:text="${totalnumber}"></a> </h5>
+							 <h5>Tags = <a  th:text="${totaltags}"></a> </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-money fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div><h3>Users</h3></div><br/>
+                            <h5>Total Users <a th:text="${totaluser}"></a> </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+<a href="/elassticsearch/">click me</a>
+
+<a href="/api/campaign">Create Promotions</a>
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts"> </div> 
+
+</body>
+</html>
